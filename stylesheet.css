@@ -1,0 +1,153 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    /* box-sizing: border-box; */
+} 
+
+header {
+    background-color: white;
+}
+
+body {
+    width: 1440px;
+    height: 400vh;
+    background-color: rgb(67,67,67);
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+a {
+    color: #ff7f00;
+    /* text-decoration: none; */
+}
+
+nav {
+    background: #222;
+}
+
+.kanban {
+    display: flex;
+    position: relative;
+    padding: 30px;
+    width: 750px;
+    background-color: green;
+    border-radius: 5px;
+}
+
+.kanban * {
+    font-family: sans-serif;
+}
+
+.kanban-col {
+    flex: 1;
+}
+
+.kanban-col:not(:last-child) {
+    margin-right: 30px;
+}
+
+.kanban-col-title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    user-select: none;
+
+}
+
+.kanban-item-input {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.kanban-dropzone {
+    height: 20px;
+    transition: background 0.15s height 0.15s;
+}
+
+.kanban-dropzone--active{
+    height: 20px;
+    background: rbga(0,0,0, .25);
+
+}
+
+.kanban-add-item {
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(0,0,0,.1);
+
+}
+
+.menu {
+    display: flex;
+    position: relative;
+    border: 1px solid red;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    width: 100%;
+}
+
+.menu a {
+    display: block;
+    border: 1px solid red;
+    padding: 15px 20px 15px 20px;
+}
+
+
+
+.menu li a {
+    display: block;
+    
+}
+
+.item {
+
+}
+
+
+.item a:hover  {
+    color: #ccc;
+    
+}
+
+.icon:nth-child(2) {
+    margin-right: auto;
+}
+
+.icon a:hover {
+    color: #ccc;
+}
+
+.submenu {
+    display: none;
+}
+
+@media all and (max-width: 860px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-items {
+        flex-direction: column;
+    }
+    .icon {
+        margin-right: auto;
+    }
+    .item {
+        margin-right: auto;
+    }
+}
+
+
