@@ -13,6 +13,9 @@ export default class Column {
         this.elements.title.textContent = title
 
         this.elements.addItem.addEventListener("click", () => {
+            const newItem = KanbanAPI.insertItem(id, "")
+
+            this.renderItem(newItem)
 
         })
         KanbanAPI.getItems(id).forEach(item => {
